@@ -1,0 +1,19 @@
+
+#ifndef LCD_INTERFACE_H_
+#define LCD_INTERFACE_H_
+#include "STD_TYPES.h"
+#define LCD_DATA_DDR P1
+#define LCD_DATA_PORT P1
+#define register_select P3_4
+#define read_write      P3_5
+#define enable          P3_6
+void LCD_init();
+void LCD_SEND_COMMAND(uint8 COMMAND);
+void LCD_SEND_DATA(uint8 Data);
+void LCD_SEND_DATA_STRING(uint8 *STRING_DATA);
+void LCD_SEND_DATA_INT(uint8 INTEGAR_DATA);
+void LCD_CLEAR_DATA();
+void LCD_move_cursor_left();
+void LCD_move_cursor_right();
+
+#endif /* LCD_INTERFACE_H_ */
